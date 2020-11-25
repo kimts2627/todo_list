@@ -3,6 +3,15 @@
   width: 100%;
   height: 100%;
   text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.App-dark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgb(41, 41, 43);
 }
 
 .Catalina {
@@ -16,7 +25,18 @@
   box-shadow: 0px 3px 10px rgb(32, 32, 32);
 }
 
-h1 {
+.Catalina-dark {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  text-align: left;
+  background-image: url(./img/dark.png);
+  background-size: cover;
+  background-color: aliceblue;
+  box-shadow: 0px 3px 10px rgb(32, 32, 32);
+}
+
+.title {
   position: absolute;
   float: left;
   left: 50%;
@@ -29,6 +49,21 @@ h1 {
   animation-duration: 1s;
   animation-name: slidein;
   color: black;
+}
+
+.title-dark {
+  position: absolute;
+  float: left;
+  left: 50%;
+  top: 2em;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 1;
+  animation-duration: 1s;
+  animation-name: slidein;
+  color: white;
 }
 
 @keyframes slidein {
@@ -49,6 +84,17 @@ h1 {
   margin-left: 25%;
   margin-top: 15em;
   background-color: rgb(247, 247, 247);
+  box-shadow: 5px 3px 10px rgb(32, 32, 32);
+}
+
+.List-dark {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 5px;
+  margin-left: 25%;
+  margin-top: 15em;
+  background-color: rgb(82, 82, 82);
   box-shadow: 5px 3px 10px rgb(32, 32, 32);
 }
 
@@ -89,7 +135,25 @@ ul {
   border-radius: 3px;
 }
 
+.todo-dark {
+  position: relative;
+  border: 1px solid rgba(236, 236, 236, 0.212);
+  height: 50px;
+  padding: 5px;
+  list-style: none;
+  text-align: left;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  border-radius: 3px;
+}
+
 .todo input {
+  position: absolute;
+  left: 90%;
+  top: 35%;
+}
+
+.todo-dark input {
   position: absolute;
   left: 90%;
   top: 35%;
@@ -97,22 +161,55 @@ ul {
 
 .darkbutton {
   position: absolute;
-  border: 5px solid black;
+  border: 0px;
+  outline: 0px;
   background-color: rgba(0, 0, 0, 0);
   text-align: center;
   width: 70px;
-  height: 100px;
+  height: 90px;
   font-size: 10px;
   left: 50%;
   margin-left:-35px;
+  padding: 0px;
+  font-weight: 100;
 }
 
-.darkbutton img {
+.darkbutton-dark {
+  position: absolute;
+  border: 0px;
+  outline: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  width: 70px;
+  height: 90px;
+  font-size: 10px;
+  left: 50%;
+  margin-left:-35px;
+  padding: 0px;
+  font-weight: 100;
+  color: white;
+}
+
+.darkbutton span {
   position: absolute;
   display: block;
-  width: 30px;
-  height: 30px;
-  
+  left: 16px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../src/img/arrow.png);
+  margin: 0px;
+}
+
+.darkbutton-dark span {
+  position: absolute;
+  display: block;
+  left: 16px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../src/img/arrow-dark.png);
+  margin: 0px;
 }
 
 

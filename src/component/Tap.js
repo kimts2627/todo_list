@@ -6,8 +6,11 @@ import React from 'react';
 function Tap(props) {
   return (
     <div>
-      <button className="darkbutton">
-        <img src="../image/arrow.png" alt=""/>
+      <button
+      className={props.isDarkOn ? "darkbutton-dark" : "darkbutton"}
+      onClick={props.turnOnDarkMode}
+      >
+        <span/>
         Push to Darkmode
       </button>
     </div>

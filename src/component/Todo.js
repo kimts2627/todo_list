@@ -2,9 +2,9 @@ import React from 'react';
 
 function Todo(props) {
   return (
-    <li className="todo">
+    <li className={props.isDarkOn ? "todo-dark" : "todo"}>
       {props.todo}
-      <input type="checkbox" />
+      <input type="checkbox"/>
     </li>
   )
 }

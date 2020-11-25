@@ -10,14 +10,17 @@ class App extends React.Component {
     this.state = {
       isDarkOn: false,
       texting: '',
-      allList: ['냠냠']
+      allList: []
     }
     this.handleChange = this.handleChange.bind(this);
     this.listPush = this.listPush.bind(this);
     this.PostToDo = this.PostToDo.bind(this);
+    this.turnOnDarkMode = this.turnOnDarkMode.bind(this);
   }
 
-  //turnOnDarkMode() {}
+  turnOnDarkMode() {
+    this.setState({isDarkOn: !this.state.isDarkOn});
+  }
 
   handleChange(e) {
     let target = e.target.value;
@@ -42,12 +45,21 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Title />
-        <div className="Catalina">
-          <Tap />
+      <div className={this.state.isDarkOn ? "App-dark" : "App"}>
+        <Title isDarkOn={this.state.isDarkOn}/>
+        <div className={this.state.isDarkOn ? "Catalina-dark" : "Catalina"}>
+          <Tap
+          turnOnDarkMode={this.turnOnDarkMode}
+          isDarkOn={this.state.isDarkOn}
+          />
         </div>
-        <Todolist handleChange={this.handleChange} PostToDo={this.PostToDo} texting={this.state.texting} allList={this.state.allList}/>
+        <Todolist
+        handleChange={this.handleChange}
+        PostToDo={this.PostToDo}
+        texting={this.state.texting}
+        allList={this.state.allList}
+        isDarkOn={this.state.isDarkOn}
+        />
       </div>
     );
   }
