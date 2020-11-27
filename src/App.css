@@ -106,6 +106,10 @@
   position: relative;
   width: 70%;
   height: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin-bottom: 5px;
+  outline: 0;
 }
 
 .input button {
@@ -113,13 +117,16 @@
   width: 60px;
   margin-left: 5%;
   height: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  outline: 0;
 }
 
 ul {
   position: relative;
   padding-inline-start: 0px;
   margin: 10px;
-  height: 60%;
+  height: 70%;
   overflow-y: auto;
   overflow-x: auto;
 }
@@ -130,9 +137,13 @@ ul {
   height: 50px;
   padding: 5px;
   list-style: none;
+  font-size: small;
+  font-family: cursive;
   text-align: left;
   background-color: rgb(255, 255, 255);
   border-radius: 3px;
+  margin-bottom: 10px;
+  padding-left: 20px;
 }
 
 .todo-dark {
@@ -141,11 +152,17 @@ ul {
   height: 50px;
   padding: 5px;
   list-style: none;
+  font-size: small;
+  font-family: cursive;
   text-align: left;
   background-color: rgb(31, 31, 31);
   color: white;
   border-radius: 3px;
+  margin-bottom: 10px;
+  padding-left: 20px;
 }
+
+
 
 .todo input {
   position: absolute;
